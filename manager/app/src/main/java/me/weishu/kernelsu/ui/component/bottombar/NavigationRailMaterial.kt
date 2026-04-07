@@ -104,7 +104,8 @@ fun NavigationRailMaterial(
                         stringResource(label)
                     )
                 },
-                label = { Text(stringResource(label)) }
+                label = { Text(stringResource(label)) },
+                alwaysShowLabel = false
             )
         }
     }
