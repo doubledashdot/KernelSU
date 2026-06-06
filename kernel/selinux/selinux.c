@@ -72,6 +72,10 @@ void setenforce(bool enforce)
 #endif
 }
 
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 10, 0)
+extern int selinux_disabled;
+#endif
+
 bool getenforce(void)
 {
 #ifdef CONFIG_SECURITY_SELINUX_DISABLE
